@@ -1,7 +1,30 @@
 import React from "react";
 import "./AboutUs.css";
 
+import ReviewCard from "../reviewCard/ReviewCard";
+
 const AboutUs = () => {
+  const fakeReviews = [
+    {
+      author: "Сабырбек Данияр",
+      comment: "Быстрая доставка, вежливые консультанты",
+      rating: 5,
+      avatarUrl: "https://e7.pngegg.com/pngimages/552/861/png-clipart-computer-icons-avatar-avatar-computer-icons-avatar.png",
+    },
+    {
+      author: "Конурбай Арсен",
+      comment: "Не нашел нужный товар, но консультанты посоветовали похожий. Все понравилось",
+      rating: 4,
+      avatarUrl: "https://e7.pngegg.com/pngimages/552/861/png-clipart-computer-icons-avatar-avatar-computer-icons-avatar.png",
+    },
+    {
+      author: "Шакиров Дамир",
+      comment: "Товар не подошел по размеру.",
+      rating: 2,
+      avatarUrl: "https://e7.pngegg.com/pngimages/552/861/png-clipart-computer-icons-avatar-avatar-computer-icons-avatar.png",
+    },
+  ];
+
   return (
       <div>
         <div className="AboutUs">
@@ -30,6 +53,12 @@ const AboutUs = () => {
               Ваши замечания и предложения – залог нашего развития!
             </p>
           </div>
+        </div>
+        <div className="reviews-container">
+          <h1>Крайние отзывы наших покупателей</h1>
+          {fakeReviews.map((review, index) => (
+              <ReviewCard key={index} {...review} />
+          ))}
         </div>
       </div>
   )

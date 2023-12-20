@@ -49,6 +49,9 @@ const Header = ({ children }) => {
           <li>
             <Link to="/newItem">Добавить</Link>
           </li>
+          <li>
+            <Link to="/address">Адреса</Link>
+          </li>
 
           <FaBars
               onClick={() => setDropdownOpen((dropdownOpen) => !dropdownOpen)}
@@ -57,9 +60,6 @@ const Header = ({ children }) => {
           {dropdownOpen && (
               <div>
                 <div className="dropdown-content">
-                  <li>
-                    <Link to="/address">Адреса</Link>
-                  </li>
                   <p><b>Контакты: </b> </p>
                   <p>8 707 887 59 51</p>
                   <p>8 705 111 12 03</p>

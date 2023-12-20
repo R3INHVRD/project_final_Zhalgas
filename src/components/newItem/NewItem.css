@@ -10,7 +10,7 @@
     margin-right: auto;
     margin-top: 30px;
   }
-  
+
   .new-div{
     display:grid;
     background-color: #ffffff;
@@ -21,10 +21,17 @@
     margin-top: 15px;
     border-radius: 4px;
   }
-  
+
+  .new-div label{
+    background-color: #ffffff;
+    border: #1f1f1f;
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+
   label{
     font-size: 13px;
-    opacity: 0.9;
+    opacity: 0.7;
   }
   
   .new-title{
@@ -32,20 +39,48 @@
     margin-top: 10px;
     margin-bottom: 20px;
     margin-left: 0;
-    width: 60%;
+    width: 62%;
     padding: 10px;
   }
-  
-  .new-category{
-    background-color: #f2f4f5;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: 0;
-    width: 30%;
-    padding: 10px;
-    font-size: medium;
-  }
-  
+
+
+.new-category {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  width: 64%;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.new-category:hover {
+  border-color: #aaa;
+}
+
+.new-category:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.new-category::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #555;
+}
+
+.new-category option {
+  background-color: #fff;
+  color: #333;
+}
+
+
   .new-img{
     background-color: #f2f4f5;
     margin-top: 10px;
@@ -53,7 +88,7 @@
     margin-left: 0;
     width: 40%;
   }
-  
+
   .new-description{
     background-color: #f2f4f5;
     margin-top: 10px;
@@ -63,7 +98,7 @@
     height: 100px;
     padding: 15px;
   }
-  
+
   .new-phone{
     background-color: #f2f4f5;
     margin-top: 10px;
